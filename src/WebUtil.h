@@ -1,6 +1,5 @@
 #include "Request.h"
 #include <Arduino.h>
-#include <WiFi101.h>
 
 int parseRequestSafe(String requestString, Request &request);
 String buildSuccessfulResponse(const Request &request, const String &html);
