@@ -6,6 +6,7 @@
 
 
 WiFiServer server(80);
+WiFiClient client;
 
 char ssid[] = "sensebox";
 int status = WL_IDLE_STATUS;
@@ -30,7 +31,7 @@ if (WiFi.status() == WL_NO_SHIELD) {
 
 void loop() {
 
-WiFiClient client = server.available();
+client = server.available();
   if (client && client.available()) {
     Serial.println("device connected");
     String request_string = listenClient(client);

@@ -188,7 +188,7 @@ String buildTag(const String &tag, const String &content) {
 }
 
 
-String listenClient(WiFiClient &client) {
+String listenClient(Client& client) {
     boolean currentLineIsBlank = true;
     String request = "";
     while (client.connected()) {
